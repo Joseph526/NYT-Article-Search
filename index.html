@@ -12,7 +12,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700|Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900" rel="stylesheet">
     <!-- Font Awesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <!-- Bootstrap Javascript and jQuery library -->
@@ -28,7 +28,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class=".jumbotron">
+                <div class="jumbotron">
                     <h1>The New York Times</h1>
                     <h3>Article Search</h3>
                 </div>
@@ -56,34 +56,38 @@
                                     <li>10</li>
                                 </ul>
                         </div>
-                            <input type="text" class="form-control" aria-label="..." id="records-number">
-                            <!-- <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="caret"></span>
-                            </button> -->
-    
-                            <!-- </div> -->
+                            <input type="text" class="form-control" placeholder="Number of Records to Retrieve" aria-label="..." id="records-number">
                         </div>
                         <br>
                         <div class="input-group input-group-lg">
                             <span class="input-group-addon" id="sizing-addon1">
                                 <span class="glyphicon glyphicon-search"></span>
                             </span>
-                            <input type="text" class="form-control" placeholder="Start Year" aria-describedby="sizing-addon1" id="start-year">
+                            <input type="text" class="form-control" placeholder="Start Year (Optional)" aria-describedby="sizing-addon1" id="start-year">
                         </div>
                         <br>
                         <div class="input-group input-group-lg">
                             <span class="input-group-addon" id="sizing-addon1">
                                 <span class="glyphicon glyphicon-search"></span>
                             </span>
-                            <input type="text" class="form-control" placeholder="End Year" aria-describedby="sizing-addon1" id="end-year">
+                            <input type="text" class="form-control" placeholder="End Year (Optional)" aria-describedby="sizing-addon1" id="end-year">
                         </div>
                         <br>
                         <button class="btn btn-primary btn-lg" id="search">Search</button>
                         <button class="btn btn-primary btn-lg" id="clear-results">Clear Results</button>
+                    </div> <!-- /.form -->
+                </div> <!-- /.col -->
+            </div> <!-- /.row -->
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="article-well">
+                        <h3>Top Articles</h3>
+                        <div id="article-results"></div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> <!-- /.container -->
 
 </body>
 
