@@ -2,14 +2,16 @@ $(document).ready(function() {
     // Declare global variables
     var searchTerm;
     var numRecords;
-    var startYear;
-    var endYear;
+    var startYear = 1999;
+    var endYear = 2020;
 
 
     // Declare functions
     function displayArticleResults() {
         // Capture user input into global variables
-        searchTerm = "baseball";
+        searchTerm = $("#search-term").val();
+        numRecords = $("#records-number").val();
+        console.log(numRecords);
 
         // Build queryURL
         var apiKey = "e67f89cb72c74c48bb6bf321b0c17541"
@@ -27,6 +29,6 @@ $(document).ready(function() {
     }
 
     // Execute function
-    displayArticleResults();
+    $("#search").on("click", displayArticleResults);
 
 });
