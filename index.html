@@ -38,6 +38,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="form">
+                    <h4>* Keyword</h4>
                     <div class="input-group input-group-lg">
                         <span class="input-group-addon" id="sizing-addon1">
                             <span class="glyphicon glyphicon-search"></span>
@@ -45,6 +46,7 @@
                         <input type="text" class="form-control" placeholder="Search Term" aria-describedby="sizing-addon1" id="search-term">
                     </div>
                     <br>
+                    <h4>* Number of Articles</h4>
                     <div class="input-group input-group-lg">
                         <div class="input-group-btn">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -56,25 +58,27 @@
                                     <li>10</li>
                                 </ul>
                         </div>
-                            <input type="text" class="form-control" placeholder="Number of Records to Retrieve" aria-label="..." id="records-number">
+                            <input type="text" class="form-control" placeholder="#" aria-label="..." id="records-number">
                         </div>
                         <br>
+                        <h4>Start Year</h4>
                         <div class="input-group input-group-lg">
                             <span class="input-group-addon" id="sizing-addon1">
-                                <span class="glyphicon glyphicon-search"></span>
+                                <span class="glyphicon glyphicon-calendar"></span>
                             </span>
-                            <input type="text" class="form-control" placeholder="Start Year (Optional)" aria-describedby="sizing-addon1" id="start-year">
+                            <input type="text" class="form-control" placeholder="(Optional)" aria-describedby="sizing-addon1" id="start-year">
                         </div>
                         <br>
+                        <h4>End Year</h4>
                         <div class="input-group input-group-lg">
                             <span class="input-group-addon" id="sizing-addon1">
-                                <span class="glyphicon glyphicon-search"></span>
+                                <span class="glyphicon glyphicon-calendar"></span>
                             </span>
-                            <input type="text" class="form-control" placeholder="End Year (Optional)" aria-describedby="sizing-addon1" id="end-year">
+                            <input type="text" class="form-control" placeholder="(Optional)" aria-describedby="sizing-addon1" id="end-year">
                         </div>
                         <br>
-                        <button class="btn btn-primary btn-lg" id="search">Search</button>
-                        <button class="btn btn-primary btn-lg" id="clear-results">Clear Results</button>
+                        <button class="btn-form" id="search"><span class="glyphicon glyphicon-search"></span> Search</button>
+                        <button class="btn-form" id="clear-results"><span class="glyphicon glyphicon-repeat"></span> Clear Results</button>
                     </div> <!-- /.form -->
                 </div> <!-- /.col -->
             </div> <!-- /.row -->
@@ -87,6 +91,12 @@
                     </div>
                 </div>
             </div>
+
+            <footer>
+                <hr>
+                <p>Made by bunsushi, JudieT215, Joseph526, and jstomel</p>
+                <p><i class="fab fa-github"></i> See project on Github</p>
+            </footer>
         </div> <!-- /.container -->
 
 </body>
