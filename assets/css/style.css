@@ -1,5 +1,19 @@
+h1 {
+    font-family: "Playfair Display", serif;
+}
+
+.jumbotron {
+    text-align: center;
+}
+
 .form {
-    background-color: pink;
+    background-color: #eee;
     padding: 20px;
-    margin: 20px;
+    margin: 20px auto;
+}
+
+.article-well {
+    background-color: #eee;
+    padding: 20px;
+    margin: 20px auto;
 }
