@@ -11,7 +11,8 @@ $(document).ready(function() {
         // Capture user input into global variables
         searchTerm = $("#search-term").val();
         numRecords = $("#records-number").val();
-        console.log(numRecords);
+        // startYear = $("#start-year");
+        // endYear = $("#end-year");
 
         // Build queryURL
         var apiKey = "e67f89cb72c74c48bb6bf321b0c17541"
@@ -23,9 +24,15 @@ $(document).ready(function() {
             method: "GET"
         })
         .then(function(response) {
-            var articles = response;
+            var articles = response.response.docs;
             console.log(articles);
         })
+        
+        // Display article results in div
+        for (i = 0; i < articles.length; i++) {
+            
+        }
+
     }
 
     // Execute function
