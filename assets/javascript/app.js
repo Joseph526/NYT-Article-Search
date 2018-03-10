@@ -30,21 +30,43 @@ $(document).ready(function () {
 
                 for (var i = 0; i < articles.length; i++) {
 
+                    // Create div to contain article results
                     var well = $("<div>");
                     well.attr("id", "article-number-" + (i+1));
+                    well.addClass("article");
+
+                    // Fetch article headline
+                    var headlineLink = $("<a>");
+                    headlineLink.attr("href", articles[i].web_url);
+                    headlineLink.attr("target", "_blank");
 
                     var headline = $("<h3>");
                     headline.text(articles[i].headline.main);
-                    well.append(headline);
+                    headlineLink.append(headline);
+                    well.append(headlineLink);
 
+                    // Fetch author byline
                     var author = $("<h4>");
                     author.text(articles[i].byline.original);
                     well.append(author);
 
-                    $("#article-results").append(well);
+                    // Fetch date
+                    var date = $("<h5>");
+                    var fullDate = articles[i].pub_date
+                    var d = new Date(fullDate);
+                    var result = (d.getMonth() +1) + "/" + d.getDate() + "/" + d.getFullYear();
                     
-                    console.log(articles[i].headline.main);
-                }
+                    date.text(result);
+                    well.append(date);
+
+                    // Fetch article snippet
+                    var snippet = $("<p>");
+                    snippet.text(articles[i].snippet);
+                    well.append(snippet);
+
+                    // Render article results on the DOM
+                    $("#article-results").append(well);
+                                    }
             })
     }
 
