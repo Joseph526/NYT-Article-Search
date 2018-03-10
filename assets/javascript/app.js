@@ -35,7 +35,7 @@ $(document).ready(function () {
                 var articles = response.response.docs;
                 console.log(articles);
 
-                for (var i = 0; i < articles.length; i++) {
+                for (var i = 0; i < numRecords; i++) {
 
                     // Create div to contain article results
                     var well = $("<div>");
