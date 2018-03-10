@@ -77,7 +77,16 @@ $(document).ready(function () {
             })
     }
 
+    //function to clear the clear articles
+
     // Execute function
     $("#search").on("click", displayArticleResults);
 
-});
+    $("#clear-results").on("click", clearArticles);
+
+//function to clear the clear articles
+
+function clearArticles() {
+    $("#article-results").empty()
+}
+})
