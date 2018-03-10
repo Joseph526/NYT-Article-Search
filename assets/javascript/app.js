@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     // Declare global variables
     var searchTerm;
     var numRecords;
@@ -23,16 +23,25 @@ $(document).ready(function() {
             url: queryURL,
             method: "GET"
         })
-        .then(function(response) {
-            var articles = response.response.docs;
-            console.log(articles);
-        })
-        
-        // Display article results in div
-        for (i = 0; i < articles.length; i++) {
-            
-        }
 
+            .then(function (response) {
+                var articles = response.response.docs;
+                console.log(articles);
+
+                for (var i = 0; i < articles.length; i++) {
+
+                    var well = $("<div>");
+                    well.attr("id", "article-number-" + i+1);
+
+                    var headline = $("<h3>");
+                    headline.text(articles[i].headline.main);
+                    well.append(headline);
+
+                    $("#article-results").append(well);
+                    
+                    console.log(articles[i].headline.main);
+                }
+            })
     }
 
     // Execute function
