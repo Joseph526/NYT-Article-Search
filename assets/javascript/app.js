@@ -2,8 +2,8 @@ $(document).ready(function () {
     // Declare global variables
     var searchTerm = "";
     var numRecords;
-    var startYear = 0;
-    var endYear = 0;
+    var startYear;
+    var endYear;
 
 
     // Declare functions
@@ -73,7 +73,7 @@ $(document).ready(function () {
 
                     // Render article results on the DOM
                     $("#article-results").append(well);
-                                    }
+                }
             })
     }
 
