@@ -1,19 +1,67 @@
+/* Main Styles */
+
+body {
+    font-family: "Georgia", serif;
+}
+
 h1 {
     font-family: "Playfair Display", serif;
 }
 
+h4 {
+    font-weight: bold;
+}
+
+li {
+    padding: 10px;
+    text-align: center;
+}
+
+li:hover {
+    background-color: #eee;
+}
+
+/* Header */
 .jumbotron {
     text-align: center;
 }
 
+/* Search form */
 .form {
     background-color: #eee;
     padding: 20px;
     margin: 20px auto;
+    border-radius: 6px;
 }
 
+.dropdown-menu {
+    min-width: 50px;
+}
+
+.btn-form {
+    background-color: #b4c3d1;
+    color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid #9fb3c6;
+}
+
+.btn-form:hover {
+    background-color: #9fb3c6;
+}
+
+/* Article Results */
 .article-well {
     background-color: #eee;
     padding: 20px;
     margin: 20px auto;
+    border-radius: 6px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
 }
