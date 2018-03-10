@@ -31,11 +31,15 @@ $(document).ready(function () {
                 for (var i = 0; i < articles.length; i++) {
 
                     var well = $("<div>");
-                    well.attr("id", "article-number-" + i+1);
+                    well.attr("id", "article-number-" + (i+1));
 
                     var headline = $("<h3>");
                     headline.text(articles[i].headline.main);
                     well.append(headline);
+
+                    var author = $("<h4>");
+                    author.text(articles[i].byline.original);
+                    well.append(author);
 
                     $("#article-results").append(well);
                     
