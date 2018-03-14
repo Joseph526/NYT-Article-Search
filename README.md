@@ -16,8 +16,8 @@ We created this project to advance our technical skills in JavaScript, jQuery, H
 ## Link
 https://bunsushi.github.io/NYT-Article-Search
 
-Contributors
-*[Tegan Bunsu Ashby](https://github.com/bunsushi)
-*[Joseph Bucher](https://github.com/Joseph526)
-*[Jeff Stomel](https://github.com/jstomel)
-*[Judie Tran](https://github.com/JudieT215)
+### Contributors
+* [Tegan Bunsu Ashby](https://github.com/bunsushi)
+* [Joseph Bucher](https://github.com/Joseph526)
+* [Jeff Stomel](https://github.com/jstomel)
+* [Judie Tran](https://github.com/JudieT215)
