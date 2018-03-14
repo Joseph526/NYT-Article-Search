@@ -13,7 +13,7 @@ $(document).ready(function () {
         numRecords = $("#records-number").val().trim();
         startYear = $("#start-year").val().trim();
         endYear = $("#end-year").val().trim();
-        
+
         // Build queryURL
         var apiKey = "e67f89cb72c74c48bb6bf321b0c17541"
         var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + searchTerm + "&api-key=" + apiKey;
@@ -39,18 +39,13 @@ $(document).ready(function () {
 
                     // Create div to contain article results
                     var well = $("<div>");
-                    well.attr("id", "article-number-" + (i+1));
+                    well.attr("id", "article-number-" + (i + 1));
                     well.addClass("article");
 
                     // Fetch article headline
-                    var headlineLink = $("<a>");
-                    headlineLink.attr("href", articles[i].web_url);
-                    headlineLink.attr("target", "_blank");
-
                     var headline = $("<h3>");
                     headline.text(articles[i].headline.main);
-                    headlineLink.append(headline);
-                    well.append(headlineLink);
+                    well.append(headline);
 
                     // Fetch author byline
                     var author = $("<h4>");
@@ -61,8 +56,8 @@ $(document).ready(function () {
                     var date = $("<h5>");
                     var fullDate = articles[i].pub_date
                     var d = new Date(fullDate);
-                    var result = (d.getMonth() +1) + "/" + d.getDate() + "/" + d.getFullYear();
-                    
+                    var result = (d.getMonth() + 1) + "/" + d.getDate() + "/" + d.getFullYear();
+
                     date.text(result);
                     well.append(date);
 
@@ -71,8 +66,14 @@ $(document).ready(function () {
                     snippet.text(articles[i].snippet);
                     well.append(snippet);
 
+                    // Fetch article url
+                    var headlineLink = $("<a>");
+                    headlineLink.attr("href", articles[i].web_url);
+                    headlineLink.attr("target", "_blank");
+                    headlineLink.append(well);
+
                     // Render article results on the DOM
-                    $("#article-results").append(well);
+                    $("#article-results").append(headlineLink);
                 }
             })
     }
@@ -84,9 +85,9 @@ $(document).ready(function () {
 
     $("#clear-results").on("click", clearArticles);
 
-//function to clear the clear articles
+    //function to clear the clear articles
 
-function clearArticles() {
-    $("#article-results").empty()
-}
+    function clearArticles() {
+        $("#article-results").empty()
+    }
 })

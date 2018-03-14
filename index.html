@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>NYT Article Search</title>
+    <link rel="icon" type="image/png" href="assets/images/poweredby_nytimes_30a.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
@@ -12,7 +13,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Ultra" rel="stylesheet">
     <!-- Font Awesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <!-- Bootstrap Javascript and jQuery library -->
@@ -28,34 +29,38 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="jumbotron">
-                    <h1>The New York Times</h1>
-                    <h3>Article Search</h3>
-                </div>
+                <!-- <div class="jumbotron"> -->
+                    <!-- <h1>The New York Times</h1> -->
+                    <h1>The New York Times Article Search</h1>
+                <!-- </div> -->
             </div>
         </div>
 
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-4">
+
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4>Article Search</h4>
                     </div>
+
                     <div class="panel-body">
+
                         <h4>* Keyword</h4>
-                        <div class="input-group input-group-lg">
+                        <div class="input-group input-group">
                             <span class="input-group-addon" id="sizing-addon1">
                                 <span class="glyphicon glyphicon-search"></span>
                             </span>
                             <input type="text" class="form-control" placeholder="Search Term" aria-describedby="sizing-addon1" id="search-term">
                         </div>
                         <br>
-                        <div class = "form-group input-group input-group-lg">
-                            <label for= "pwd"> <h4>Number of Records to Retrieve</h4></label>
-                            <select class = "form-control" id ="records-number">
-                                <option value = "1">1 </option>
-                                <option value = "2">2 </option> 
-                                <option value = "3">3 </option> 
+
+                        <div class="form-group input-group input-group">
+                            <label for="pwd"> <h4>* Number of Records to Retrieve</h4></label>
+                            <select class="form-control" id="records-number">
+                                <option value="1">1 </option>
+                                <option value="2">2 </option> 
+                                <option value="3">3 </option> 
                                 <option value="4">4 </option>
                                 <option value="5" selected>5 </option>
                                 <option value="6">6 </option>
@@ -65,37 +70,23 @@
                                 <option value="10">10 </option>
                             </select>
                         </div>
-
-                        <!-- <h4>* Number of Articles</h4>
-                        <div class="input-group input-group-lg">
-                          
-                            <div class="input-group-btn">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li>1</li>
-                                    <li>5</li>
-                                    <li>10</li>
-                                </ul>
-                            </div>
-                            <input type="number" class="form-control" placeholder="#" aria-label="..." id="records-number">
-                        </div> -->
                         <br>
+
                         <h4>Start Year</h4>
-                        <div class="input-group input-group-lg">
+                        <div class="input-group input-group">
                             <span class="input-group-addon" id="sizing-addon1">
                                 <span class="glyphicon glyphicon-calendar"></span>
                             </span>
-                            <input type="number" class="form-control" placeholder="(Optional)" aria-describedby="sizing-addon1" id="start-year">
+                            <input type="number" class="form-control" placeholder="YYYY" aria-describedby="sizing-addon1" id="start-year">
                         </div>
                         <br>
+
                         <h4>End Year</h4>
-                        <div class="input-group input-group-lg">
+                        <div class="input-group input-group">
                             <span class="input-group-addon" id="sizing-addon1">
                                 <span class="glyphicon glyphicon-calendar"></span>
                             </span>
-                            <input type="number" class="form-control" placeholder="(Optional)" aria-describedby="sizing-addon1" id="end-year">
+                            <input type="number" class="form-control" placeholder="YYYY" aria-describedby="sizing-addon1" id="end-year">
                         </div>
                         <br>
                         <button class="btn-form" id="search">
@@ -107,11 +98,11 @@
                 <!-- /.panel -->
             </div>
             <!-- /.col -->
-        </div>
+        <!-- </div> -->
         <!-- /.row -->
 
-        <div class="row">
-            <div class="col-md-12">
+        <!-- <div class="row"> -->
+            <div class="col-md-8">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                             <h4>Top Articles</h4>
@@ -127,9 +118,9 @@
 
         <footer>
             <hr>
-            <p>Made by bunsushi, JudieT215, Joseph526, and jstomel</p>
-            <p>
-                <i class="fab fa-github"></i> See project on Github</p>
+            <a href="http://developer.nytimes.com" target="_blank"><img src="assets/images/poweredby_nytimes_200c.png" alt="NYT-API" id="NYT-branding"></a>
+            <p>Made by <a href="https://bunsushi.github.io" target="_blank">bunsushi</a>, <a href="https://www.github.com/Joseph526" target="_blank">Joseph526</a>, <a href="https://www.github.com/jstomel" target="_blank">jstomel</a>, and <a href="https://www.github.com/JudieT215" target="_blank">JudieT215</a></p>
+            <a href="https://github.com/bunsushi/NYT-Article-Search" target="_blank"><p>See project on Github <i class="fab fa-github"></i></p></a>
         </footer>
     </div>
     <!-- /.container -->

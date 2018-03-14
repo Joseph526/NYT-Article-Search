@@ -2,65 +2,67 @@
 
 body {
     font-family: "Georgia", serif;
+    color: #000;
 }
 
-h1 {
-    font-family: "Playfair Display", serif;
+h1, h2 {
+    font-family: "Ultra", "Playfair Display", serif;
+    padding: 20px 0;
 }
 
-h4 {
+h4, h3 {
     font-weight: bold;
 }
 
-li {
-    padding: 10px;
-    text-align: center;
+a {
+    color: #000;
 }
 
-li:hover {
-    background-color: #eee;
+a:hover, a:visited {
+    color: #333;
+    text-decoration: none;
 }
 
-/* Header */
-.jumbotron {
-    text-align: center;
+/* Panel Body Styles */
+
+.panel-body {
+    background-color: #fff;
 }
 
 /* Search form */
-.form {
-    background-color: #eee;
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 6px;
-}
-
-.dropdown-menu {
-    min-width: 50px;
-}
 
 .btn-form {
-    background-color: #b4c3d1;
-    color: #fff;
+    background-color: #f5f5f5;
     padding: 20px;
     border-radius: 6px;
     font-weight: bold;
     text-transform: uppercase;
-    border: 1px solid #9fb3c6;
+    border: 1px solid #ddd;
 }
 
 .btn-form:hover {
-    background-color: #9fb3c6;
+    background-color: #ddd;
 }
 
 /* Article Results */
 .article-well, .article {
-    background-color: #eee;
+    background-color: #f5f5f5;
     padding: 20px;
     margin: 20px auto;
     border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.article-well, .article:hover {
+    background-color: #ddd;
+    cursor: pointer;
 }
 
 /* Footer */
+#NYT-branding {
+    padding-bottom: 20px;
+}
+
 footer {
     text-align: center;
     padding: 20px;
